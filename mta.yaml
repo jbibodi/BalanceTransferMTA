@@ -1,0 +1,37 @@
+ID: BalanceTransferMTA
+_schema-version: '2.1'
+version: 0.0.1
+
+modules:
+ - name: service
+   type: nodejs
+   path: service
+   properties:
+      blockchainServiceName: sample-balance-transfer.balance-transfer-channel
+      ACCOUNT_URL: https://customerdemo.authentication.us10.hana.ondemand.com
+      CHAINCODE_ID: 996bdccd-41b8-47a2-ac02-03553fef749a-com-sap-icn-blockchain-netting-scenario/36
+      CHANNEL_ID: dev996bdccd-41b8-47a2-ac02-03553fef749abalance-transfer-channel
+      CLIENT_ID: sb-1b50c6ab-25c9-4305-8370-e6e714f492b6!b1337|na-3a01f1e2-bc33-4e12-86a2-ffffaea79918!b33
+      CLIENT_SECRET: /Otwy+TKcJ0rfJoHopT35Snb7b0=
+      DOC_URL: https://help.sap.com/viewer/p/HYPERLEDGER_FABRIC
+      IDENTITY_ZONE: customerdemo
+      SERVICE_URL: https://hyperledger-fabric.cfapps.us10.hana.ondemand.com/api/v1
+   provides:
+    - name: service
+      properties:
+         application-url: ${default-url}
+   requires:
+      - name: sample-balance-transfer.balance-transfer-channel
+      
+resources:
+  - name: sample-balance-transfer.balance-transfer-channel
+    parameters:
+       service-plan: channel
+       service: hyperledger-fabric
+    type: org.cloudfoundry.managed-service
+  - name: uaa_BalanceTransferMTA
+    parameters:
+       path: ./xs-security.json
+       service-plan: application
+       service: xsuaa
+    type: org.cloudfoundry.managed-service

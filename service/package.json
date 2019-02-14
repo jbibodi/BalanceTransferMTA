@@ -1,0 +1,33 @@
+{
+  "dependencies": {},
+  "description": "my description",
+  "devDependencies": {
+    "jest": "^23.6.0",
+    "jest-junit": "^5.2.0",
+    "btoa": "^1.2.1",
+    "cookie-parser": "~1.4.3",
+    "debug": "~2.6.9",
+    "express": "~4.16.0",
+    "http-errors": "~1.6.2",
+    "morgan": "~1.9.0",
+    "pug": "2.0.0-beta11",
+    "request": "^2.88.0",
+    "request-promise": "^4.2.2",
+    "rimraf": "^2.6.2",
+    "@sap/grunt-sapui5-bestpractice-build": "1.3.62",
+    "@sap/grunt-sapui5-bestpractice-test": "2.0.0",
+    "@sap/approuter": "5.7.0"
+  },
+  "files": [],
+  "main": "server.js",
+  "name": "service",
+  "scripts": {
+    "test": "jest --config jest.json",
+    "test-coverage": "jest --coverage --config jest.json",
+    "start": "node server.js"
+  },
+  "engines": {
+    "node": "8.x"
+  },
+  "version": "1.0.0"
+}

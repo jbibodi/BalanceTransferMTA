@@ -1,0 +1,67 @@
+<mvc:View controllerName="ui-space.ui.controller.TransferBalance" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:mvc="sap.ui.core.mvc"
+	displayBlock="true" xmlns="sap.m">
+	<App id="idAppControl">
+		<pages>
+			<Page showHeader="true" title="Netting Scenario" showFooter="true" showNavButton="false">
+				<content>
+					<VBox alignItems="Stretch" direction="Column" fitContainer="false" width="100%" height="auto" justifyContent="Start" renderType="Div"
+						visible="true" displayInline="false">
+						<items>
+							<Text text="Get Company Balance" width="auto" maxLines="1" wrapping="false" textAlign="Begin" textDirection="Inherit" visible="true"
+								class="sapUiResponsiveMargin"/>
+							<HBox alignItems="Stretch" direction="Row" fitContainer="false" width="auto" height="auto" justifyContent="Start" renderType="Div"
+								visible="true" displayInline="false" class="sapUiResponsiveMargin">
+								<items>
+									<Input placeholder="Company Name" type="Text" showValueHelp="false" enabled="true" visible="true" width="auto" valueHelpOnly="false"
+										maxLength="10" class="sapUiTinyMarginTop sapUiTinyMarginBottom sapUiLargeMarginBegin sapUiLargeMarginEnd" id="companyName"/>
+									<Input value="Amount- Auto populated" placeholder="" type="Text" showValueHelp="false" enabled="false" visible="true" width="auto"
+										valueHelpOnly="false" maxLength="25" class="sapUiTinyMarginTop sapUiTinyMarginBottom sapUiLargeMarginEnd" id="autoAmount"/>
+								</items>
+								<layoutData/>
+							</HBox>
+							<HBox alignItems="Stretch" direction="Row" fitContainer="false" width="auto" height="auto" justifyContent="Start" renderType="Div"
+								visible="true" displayInline="false" class="sapUiResponsiveMargin">
+								<items>
+									<Button text="Get Data" type="Default" icon="sap-icon://process" iconFirst="true" width="auto" enabled="true" visible="true"
+										iconDensityAware="false" class="sapUiTinyMarginBottom sapUiLargeMarginBegin" press="_onButtonPress"/>
+									<Button text="Reset" type="Default" icon="sap-icon://reset" iconFirst="true" width="auto" enabled="true" visible="true"
+										iconDensityAware="false" class="sapUiTinyMarginBottom sapUiTinyMarginBegin" press="_onButtonPress1"/>
+								</items>
+								<layoutData/>
+							</HBox>
+							<Text text="Transfer Balance" width="auto" maxLines="1" wrapping="false" textAlign="Begin" textDirection="Inherit" visible="true"
+								class="sapUiResponsiveMargin"/>
+							<HBox alignItems="Stretch" direction="Row" fitContainer="false" width="auto" height="auto" justifyContent="Start" renderType="Div"
+								visible="true" displayInline="false" class="sapUiResponsiveMargin">
+								<items>
+									<Input placeholder="Transfer From" type="Text" showValueHelp="false" enabled="true" visible="true" width="auto" valueHelpOnly="false"
+										maxLength="10" class="sapUiTinyMarginTop sapUiTinyMarginBottom sapUiLargeMarginBegin sapUiLargeMarginEnd" id="transferFrom"/>
+									<Input value="" placeholder="Transfer To" type="Text" showValueHelp="false" enabled="true" visible="true" width="auto" valueHelpOnly="false"
+										maxLength="10" class="sapUiTinyMarginTop sapUiTinyMarginBottom sapUiTinyMarginBegin sapUiLargeMarginEnd" id="transferTo"/>
+									<Input placeholder="Amount" type="Text" showValueHelp="false" enabled="true" visible="true" width="auto" valueHelpOnly="false"
+										maxLength="10" class="sapUiTinyMarginTop sapUiTinyMarginBottom sapUiTinyMarginBegin sapUiTinyMarginEnd" id="amountTransferred"/>
+								</items>
+								<layoutData/>
+							</HBox>
+							<HBox alignItems="Stretch" direction="Row" fitContainer="false" width="auto" height="auto" justifyContent="Start" renderType="Div"
+								visible="true" displayInline="false" class="sapUiResponsiveMargin">
+								<items>
+									<Button text="Transfer" type="Default" icon="sap-icon://flight" iconFirst="true" width="auto" enabled="true" visible="true"
+										iconDensityAware="false" class="sapUiTinyMarginTop sapUiLargeMarginBegin sapUiTinyMarginEnd" press="_onButtonPress2"/>
+									<Button text="Reset" type="Default" icon="sap-icon://reset" iconFirst="true" width="auto" enabled="true" visible="true"
+										iconDensityAware="false" class="sapUiTinyMarginTop sapUiTinyMarginBegin sapUiTinyMarginEnd" press="_onButtonPress3"/>
+								</items>
+								<layoutData/>
+							</HBox>
+						</items>
+						<layoutData/>
+					</VBox>
+				</content>
+				<footer/>
+				<headerContent/>
+				<subHeader/>
+				<customHeader/>
+			</Page>
+		</pages>
+	</App>
+</mvc:View>
